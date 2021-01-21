@@ -1,9 +1,9 @@
 <?php 
 class doll{
-	public $doll;
-	public $sumAccessories = 0;
-	public $accessories = array();
-	public $accessoriesCost = 0;
+	protected $doll;
+	protected $sumAccessories = 0;
+	protected $accessories = array();
+	protected $accessoriesCost = 0;
 
 	//method untuk menentukan jenis boneka
 	public function setDoll($new_doll){
