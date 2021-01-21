@@ -1,12 +1,12 @@
 <?php 
 class doll{
-	var $doll;
-	var $sumAccessories = 0;
-	var $accessories = array();
-	var $accessoriesCost = 0;
+	public $doll;
+	public $sumAccessories = 0;
+	public $accessories = array();
+	public $accessoriesCost = 0;
 
 	//method untuk menentukan jenis boneka
-	function setDoll($new_doll){
+	public function setDoll($new_doll){
 		if($new_doll == 1){
 			$this->doll = "Beruang";
 		}elseif($new_doll == 2){
@@ -20,11 +20,11 @@ class doll{
 		}
 	}
 	//method menentukan jumlah aksesoris
-	function setsumAccessories($total_input){
+	public function setsumAccessories($total_input){
 		$this->sumAccessories = $total_input;
 	}
 	//method menambahkan daftar aksesoris yang dipasang
-	function addAccessories($object){
+	public function addAccessories($object){
 		if($object ==1){
 			$object = "Topi";
 			$this->accessoriesCost += 30000;
@@ -48,7 +48,7 @@ class doll{
 		array_push($this->accessories,$object);
 	}
 	//method untuk mencetak ketersediaan aksesoris pada array
-	function isAccessoriesAvailable($param){
+	public function isAccessoriesAvailable($param){
 		if(in_array($param, $this->accessories)){
 			return true;
 		}else{
@@ -56,7 +56,7 @@ class doll{
 		}
 	}
 	//method menghitung total pembelian
-	function countTotal(){
+	public function countTotal(){
 		//inisialisasi biaya pemasangan
 		$installation =  0;
 		//menghitung total biaya

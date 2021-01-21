@@ -1,5 +1,5 @@
 <?php 
-include("doll.php");
+require("doll.php");
 	$dollmachine = new doll();
 
 	echo "\n+===== DAFTAR BONEKA YANG TERSEDIA =====+\n";
